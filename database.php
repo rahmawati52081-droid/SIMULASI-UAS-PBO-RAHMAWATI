@@ -1,5 +1,5 @@
 <?php
-// koneksi/database.php
+//database.php
 
 class Database {
     private $host = "localhost";
