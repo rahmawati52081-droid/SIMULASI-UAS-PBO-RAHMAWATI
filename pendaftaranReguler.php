@@ -32,9 +32,9 @@ class PendaftaranReguler extends Pendaftaran {
 
     // Metode Query Spesifik untuk Jalur Reguler
     public static function getDaftarReguler($db) {
-        $query = "SELECT id_pendaftaran, nama_calon, asal_school = asal_school, asal_sekolah, nilai_ujian, biaya_pendaftaran_dasar, pilihan_prodi, lokasi_kampus 
-                  FROM tabel_pendaftaran 
-                  WHERE jalur_pendaftaran = 'Reguler'";
+        $query = "SELECT id_pendaftaran, nama_calon, asal_sekolah, nilai_ujian, biaya_pendaftaran_dasar, pilihan_prodi, lokasi_kampus 
+          FROM tabel_pendaftaran 
+          WHERE jalur_pendaftaran = 'Reguler'";
         
         $stmt = $db->prepare($query);
         $stmt->execute();
