@@ -20,6 +20,7 @@ class PendaftaranReguler extends Pendaftaran {
     public function getLokasiKampus() { return $this->lokasiKampus; }
 
     // Implementasi Abstract Method 1: Hitung Total Biaya (Reguler tidak ada diskon)
+    // Implementasi Overriding Tahap 5
     public function hitungTotalBiaya() {
         return $this->biayaPendaftaranDasar;
     }

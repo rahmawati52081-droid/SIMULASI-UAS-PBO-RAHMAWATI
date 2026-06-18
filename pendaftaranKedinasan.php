@@ -19,8 +19,9 @@ class PendaftaranKedinasan extends Pendaftaran {
     public function getInstansiSponsor() { return $this->instansiSponsor; }
 
     // Implementasi Abstract Method 1: Hitung Total Biaya (Contoh: Jalur kedinasan dibayari penuh oleh sponsor/instansi alias gratis)
+    // Implementasi Overriding Tahap 5
     public function hitungTotalBiaya() {
-        return 0; // Rp 0,- (Ditanggung Instansi)
+        return $this->biayaPendaftaranDasar * 1.25;
     }
 
     // Implementasi Abstract Method 2: Tampilkan Info Jalur

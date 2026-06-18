@@ -19,11 +19,9 @@ class PendaftaranPrestasi extends Pendaftaran {
     public function getTingkatPrestasi() { return $this->tingkatPrestasi; }
 
     // Implementasi Abstract Method 1: Hitung Total Biaya (Contoh simulasi: potongan 50% untuk tingkat Internasional/Nasional)
+    // Implementasi Overriding Tahap 5
     public function hitungTotalBiaya() {
-        if ($this->tingkatPrestasi == 'Internasional' || $this->tingkatPrestasi == 'Nasional') {
-            return $this->biayaPendaftaranDasar * 0.5; // Diskon 50%
-        }
-        return $this->biayaPendaftaranDasar * 0.8; // Diskon 20% untuk tingkat Provinsi/Lainnya
+        return $this->biayaPendaftaranDasar - 50000;
     }
 
     // Implementasi Abstract Method 2: Tampilkan Info Jalur
